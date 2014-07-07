@@ -20,7 +20,12 @@ Example usage:
   <h4>Filter</h4>
   <label>Search: <input type="text" ng-model="search.$" /></label>
 </div>
-<div paginate-me objects="people" data="$myVar = $objects" order-by="name" page-size="10" search="search">
+<div paginate-me
+     objects="people"
+     data="$myVar = $objects"
+     order-by="name"
+     page-size="10"
+     search="search">
   <table class="table">
     <thead>
       <tr>
