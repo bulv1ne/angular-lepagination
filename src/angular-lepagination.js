@@ -24,7 +24,7 @@
       },
       transclude: true,
       templateUrl: 'table-paginate.html',
-      controller: function($scope, $filter) {
+      controller: ['$scope', '$filter', function($scope, $filter) {
         $scope.currentPage = 1;
         $scope.pageSize = 25;
         if ($scope.defaultPageSize) {
@@ -107,11 +107,11 @@
         this.getOrderBy = function() {
           return $scope.orderBy;
         };
-      }
+      }]
     };
   })
 
-  .directive('paginateOrder', function($filter) {
+  .directive('paginateOrder', function() {
     return {
       restrict: 'A',
       scope: {},
