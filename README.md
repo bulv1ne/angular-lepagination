@@ -1,6 +1,18 @@
 angular-lepagination
 ====================
 
+Install with bower
+
+```sh
+bower install angular-lepagination
+```
+
+Load the javascript ``angular-lepagination/src/angular-lepagination.min.js`` and declare your Angular dependency
+
+```js
+angular.module('myModule', ['bulv1ne.lepagination']);
+```
+
 Example usage:
 
 ```html
