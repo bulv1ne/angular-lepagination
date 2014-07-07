@@ -25,6 +25,7 @@
       transclude: true,
       templateUrl: 'table-paginate.html',
       controller: ['$scope', '$filter', function($scope, $filter) {
+        // Basic settings
         $scope.currentPage = 1;
         $scope.pageSize = 25;
         if ($scope.defaultPageSize) {
@@ -35,11 +36,7 @@
         }
         $scope.orderBy = $scope.defaultOrderBy;
 
-        $scope.$watch('objects', function(newValue, oldValue) {
-          $scope.currentPage = 1;
-          $scope.applyObjects();
-        });
-
+        // Apply filters
         $scope.applyObjects = function() {
           var objs = $scope.objects;
           objs = $filter('filter')(objs, $scope.search);
@@ -50,6 +47,19 @@
           });
         };
 
+        // Watch for new objects
+        $scope.$watch('objects', function() {
+          // Goto first page and applyObjects
+          $scope.gotoPage(1);
+        });
+
+        // Watch search value
+        $scope.$watch('search.$', function() {
+          // Goto first page and applyObjects
+          $scope.gotoPage(1);
+        });
+
+        // Pages
         $scope.numberOfPages = function() {
           if (!$scope.objects) {
             return 1;
@@ -91,12 +101,6 @@
           }
           $scope.applyObjects();
         };
-
-        // Watch search value
-        $scope.$watch('search.$', function() {
-          $scope.gotoPage(1);
-          $scope.applyObjects();
-        });
 
         // paginateOrder functions
         this.setOrderBy = function(value) {
