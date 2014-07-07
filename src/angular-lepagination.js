@@ -8,9 +8,6 @@
       if (!input) {
         return input;
       }
-      if (pageSize === undefined) {
-        pageSize = 25;
-      }
       return input.slice((page - 1) * pageSize, page * pageSize);
     };
   })
@@ -29,7 +26,7 @@
       templateUrl: 'table-paginate.html',
       controller: function($scope, $filter) {
         $scope.currentPage = 1;
-        $scope.pageSize = 5;
+        $scope.pageSize = 25;
         if ($scope.defaultPageSize) {
           var pageSize = parseInt($scope.defaultPageSize, 10);
           if (pageSize > 0) {
