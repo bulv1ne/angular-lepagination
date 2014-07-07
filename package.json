@@ -1,0 +1,29 @@
+{
+  "name": "angular-lepagination",
+  "version": "0.0.1",
+  "description": "Simple table pagination",
+  "main": "src/paginate-anything.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:bulv1ne/angular-lepagination.git"
+  },
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-html2js": "latest",
+    "html-minifier": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-contrib-uglify": "latest"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Niels Lemmens",
+    "email": "",
+    "url": "https://github.com/bulv1ne"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+<div ng-transclude></div>
+<ul class="pagination">
+  <li ng-class="{disabled: prevPageDisabled()}"><a href="" ng-click="gotoPage(1)">&#12298;</a></li>
+  <li ng-class="{disabled: prevPageDisabled()}"><a href="" ng-click="prevPage()">&#12296;</a></li>
+  <li ng-class="{active: (currentPage === page)}" ng-repeat="page in pages()"><a href="" ng-click="gotoPage(page)">{{page}}</a></li>
+  <li ng-class="{disabled: nextPageDisabled()}"><a href="" ng-click="nextPage()">&#12297;</a></li>
+  <li ng-class="{disabled: nextPageDisabled()}"><a href="" ng-click="gotoPage(numberOfPages())">&#12299;</a></li>
+</ul>

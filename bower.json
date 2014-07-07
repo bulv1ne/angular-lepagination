@@ -1,0 +1,21 @@
+{
+  "name": "angular-lepagination",
+  "version": "0.0.1",
+  "main": "src/angular-lepagination.min.js",
+  "dependencies": {
+    "angular": "latest"
+  },
+  "ignore": [
+    "**/.*",
+    "**/*.json",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "homepage": "https://github.com/bulv1ne/angular-lepagination",
+  "authors": [
+    "Niels Lemmens"
+  ],
+  "license": "MIT"
+}
