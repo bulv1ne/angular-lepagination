@@ -1,6 +1,8 @@
 angular-lepagination
 ====================
 
+[DEMO](http://plnkr.co/edit/SYqOBqgtyFt0M6BeDzhE?p=preview)
+
 Install with bower
 
 ```sh
