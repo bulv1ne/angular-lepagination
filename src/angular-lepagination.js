@@ -14,7 +14,7 @@
 
   .directive('paginateMe', function() {
     return {
-      restrict: 'A',
+      restrict: 'EA',
       scope: {
         objects: '=',
         data: '&',
