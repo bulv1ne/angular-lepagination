@@ -18,7 +18,10 @@ module.exports = function(grunt) {
     uglify: {
       scripts: {
         files: {
-          'src/angular-lepagination.min.js': ['src/angular-lepagination.js', 'src/angular-lepagination.tpl.js']
+          'angular-lepagination.min.js': [
+            'src/angular-lepagination.js',
+            'src/angular-lepagination.tpl.js'
+          ]
         }
       }
     },

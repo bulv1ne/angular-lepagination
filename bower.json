@@ -1,6 +1,6 @@
 {
   "name": "angular-lepagination",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "src/angular-lepagination.min.js",
   "dependencies": {
     "angular": "latest"
