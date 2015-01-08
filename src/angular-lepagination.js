@@ -50,7 +50,11 @@
         // Watch for new objects
         $scope.$watch('objects', function() {
           // Goto first page and applyObjects
-          $scope.gotoPage(1);
+          if ($scope.currentPage > $scope.numberOfPages()) {
+            $scope.gotoPage($scope.numberOfPages());
+          }else{
+            $scope.applyObjects();
+          }
         });
 
         // Watch search value
