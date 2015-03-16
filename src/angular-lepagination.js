@@ -153,5 +153,20 @@
         };
       }
     };
+  })
+
+  .directive('paginateOrderDefault', function() {
+    return {
+      restrict: 'A',
+      scope: false,
+      require: '^paginateMe',
+      link: function(scope, element, attrs, ctrl) {
+        if (angular.isDefined(attrs.paginateOrderReverse)) {
+          ctrl.setOrderBy('-' + attrs.paginateOrder);
+        } else {
+          ctrl.setOrderBy(attrs.paginateOrder);
+        }
+      }
+    };
   });
 }());
